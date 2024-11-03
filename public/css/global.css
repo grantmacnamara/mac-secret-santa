@@ -1,0 +1,204 @@
+:root {
+    --christmas-red: #D42426;
+    --christmas-green: #165B33;
+    --christmas-gold: #D4AF37;
+    --christmas-white: #F4F4F4;
+    --christmas-dark: #2F2F2F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--christmas-green);
+    background-image: 
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    color: var(--christmas-dark);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--christmas-gold);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--christmas-green);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+.form-control {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--christmas-green);
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--christmas-green);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-logout {
+    background-color: var(--christmas-red);
+}
+
+/* Layout Utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px);
+}
+
+/* Admin Panel */
+.admin-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+th {
+    background-color: var(--christmas-green);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--christmas-gold);
+}
+
+/* Status Indicators */
+.status-ready {
+    color: var(--christmas-green);
+    font-weight: bold;
+}
+
+.status-not-ready {
+    color: var(--christmas-red);
+}
+
+/* Match Cell */
+.match-cell {
+    color: var(--christmas-red);
+    font-weight: bold;
+}
+
+/* Festive Decorations */
+.card::before {
+    content: '🎄';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 24px;
+}
+
+.card::after {
+    content: '🎅';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .admin-controls {
+        flex-direction: column;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Add these styles for the logout button */
+.logout-button {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--christmas-gold);
+}
+
+.btn-logout {
+    background-color: var(--christmas-red);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #b01e20;
+} 

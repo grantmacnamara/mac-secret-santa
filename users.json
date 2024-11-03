@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "adminpass",
+    "isAdmin": true,
+    "ready": true,
+    "likes": [],
+    "dislikes": [],
+    "matchedWith": null
+  },
+  {
+    "id": 1730663928541,
+    "username": "Lee",
+    "password": "1",
+    "isAdmin": false,
+    "ready": false,
+    "likes": [],
+    "dislikes": [],
+    "matchedWith": null
+  },
+  {
+    "id": 1730663933107,
+    "username": "Grant",
+    "password": "1",
+    "isAdmin": false,
+    "ready": false,
+    "likes": [],
+    "dislikes": [],
+    "matchedWith": null
+  }
+]

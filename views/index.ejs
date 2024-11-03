@@ -1,0 +1,34 @@
+<div class="flex-center">
+    <div class="card">
+        <h1>Welcome, <%= user.username %></h1>
+        
+        <% if (!user.ready) { %>
+            <form action="/update-preferences" method="POST">
+                <div class="form-control">
+                    <label>Two things you like:</label>
+                    <input type="text" name="likes[]" placeholder="Like 1" required>
+                    <input type="text" name="likes[]" placeholder="Like 2" required>
+                </div>
+                <div class="form-control">
+                    <label>Two things you dislike:</label>
+                    <input type="text" name="dislikes[]" placeholder="Dislike 1" required>
+                    <input type="text" name="dislikes[]" placeholder="Dislike 2" required>
+                </div>
+                <button type="submit">I'm Ready!</button>
+            </form>
+        <% } else { %>
+            <div class="preferences-display">
+                <h3>Your Choices:</h3>
+                <p><strong>Likes:</strong> <%= user.likes.join(', ') %></p>
+                <p><strong>Dislikes:</strong> <%= user.dislikes.join(', ') %></p>
+                <a href="/matches" class="btn">View Your Match</a>
+            </div>
+        <% } %>
+
+        <div class="logout-button">
+            <form action="/logout" method="POST">
+                <button type="submit" class="btn-logout">Logout</button>
+            </form>
+        </div>
+    </div>
+</div> 

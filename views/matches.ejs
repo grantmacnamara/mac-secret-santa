@@ -1,0 +1,34 @@
+<div class="flex-center">
+    <div class="card">
+        <% if (!allUsersReady) { %>
+            <h1>Waiting for Others</h1>
+            <p>Other users need to complete their choices. Please check back later!</p>
+            
+            <% if (notReadyUsers.length > 0) { %>
+                <p>Waiting for:</p>
+                <ul>
+                    <% notReadyUsers.forEach(user => { %>
+                        <li><%= user.username %></li>
+                    <% }); %>
+                </ul>
+            <% } %>
+        <% } else if (!matchedUser) { %>
+            <h1>Matches Not Ready</h1>
+            <p>All users are ready, but matches haven't been generated yet.</p>
+            <p>Please check back later!</p>
+        <% } else { %>
+            <h1>Your Secret Santa Match</h1>
+            <div class="match-details">
+                <p>You are Secret Santa for: <strong><%= matchedUser.username %></strong></p>
+                <p><strong>Likes:</strong> <%= matchedUser.likes.join(', ') %></p>
+                <p><strong>Dislikes:</strong> <%= matchedUser.dislikes.join(', ') %></p>
+            </div>
+        <% } %>
+
+        <div class="logout-button">
+            <form action="/logout" method="POST">
+                <button type="submit" class="btn-logout">Logout</button>
+            </form>
+        </div>
+    </div>
+</div> 

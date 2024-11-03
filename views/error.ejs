@@ -1,0 +1,35 @@
+<div class="flex-center">
+    <div class="card">
+        <h1>Oops! Something went wrong</h1>
+        <div class="error-content">
+            <p><%= message %></p>
+            <% if (error && error.stack) { %>
+                <pre class="error-stack"><%= error.stack %></pre>
+            <% } %>
+        </div>
+        <div class="error-actions">
+            <button onclick="window.location.href='/'">Go Home</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .error-content {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .error-stack {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f8f8f8;
+        border-radius: 5px;
+        font-size: 14px;
+        overflow-x: auto;
+    }
+
+    .error-actions {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style> 
