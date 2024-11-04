@@ -88,7 +88,14 @@ router.post('/add-user', [checkAuth, checkAdmin], (req, res) => {
 
 router.post('/delete-user/:id', [checkAuth, checkAdmin], (req, res) => {
     const users = readUsers();
-    const updatedUsers = users.filter(u => u.id !== parseInt(req.params.id) && !u.isAdmin);
+    const userToDelete = users.find(u => u.id === parseInt(req.params.id));
+    
+    // Check if user exists and is not an admin
+    if (!userToDelete || userToDelete.isAdmin) {
+        return res.redirect('/admin?error=Cannot delete admin user');
+    }
+
+    const updatedUsers = users.filter(u => u.id !== parseInt(req.params.id));
     saveUsers(updatedUsers);
     res.redirect('/admin');
 });
