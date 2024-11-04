@@ -8,37 +8,5 @@
     "likes": [],
     "dislikes": [],
     "matchedWith": null
-  },
-  {
-    "id": 1730715823698,
-    "username": "2",
-    "password": "1",
-    "isAdmin": false,
-    "ready": true,
-    "likes": [
-      "2",
-      "2"
-    ],
-    "dislikes": [
-      "2",
-      "2"
-    ],
-    "matchedWith": 1730715825922
-  },
-  {
-    "id": 1730715825922,
-    "username": "1",
-    "password": "1",
-    "isAdmin": false,
-    "ready": true,
-    "likes": [
-      "1",
-      "1"
-    ],
-    "dislikes": [
-      "1",
-      "1"
-    ],
-    "matchedWith": 1730715823698
   }
 ]
